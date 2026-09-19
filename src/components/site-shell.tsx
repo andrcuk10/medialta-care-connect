@@ -39,15 +39,13 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </Button>
           </div>
         </div>
-        {open && (
-          <nav className="border-t border-border bg-background px-5 py-4 md:hidden" aria-label="Mobilna navigacija">
-            <div className="mx-auto flex max-w-7xl flex-col gap-1">
-              {nav.map((item) => (
-                <Link key={item.to} to={item.to} onClick={() => setOpen(false)} className="py-3 text-sm font-semibold uppercase tracking-widest">{item.label}</Link>
-              ))}
-            </div>
-          </nav>
-        )}
+        <nav className={`absolute left-0 right-0 top-full border-t border-border bg-background px-5 py-4 shadow-lg md:hidden ${open ? "visible opacity-100" : "invisible opacity-0"} transition-[opacity,visibility] duration-200`} aria-label="Mobilna navigacija" aria-hidden={!open}>
+          <div className="mx-auto flex max-w-7xl flex-col gap-1">
+            {nav.map((item) => (
+              <Link key={item.to} to={item.to} onClick={() => setOpen(false)} className="py-3 text-sm font-semibold uppercase tracking-widest">{item.label}</Link>
+            ))}
+          </div>
+        </nav>
       </header>
       {children}
       <footer className="border-t border-border px-5 py-10 sm:px-6">
