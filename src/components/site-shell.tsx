@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, Phone } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/medialta-logo-v2.png.asset.json";
+import logoAsset from "@/assets/medialta-logo-v3.png.asset.json";
 import { contact } from "@/lib/medialta-data";
 
 const nav = [
@@ -19,7 +19,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="mx-auto grid h-24 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-6">
           <div className="flex min-w-0 items-center gap-8">
             <Link to="/" aria-label="Medialta početna" className="shrink-0">
-              <img src={logoAsset.url} alt="Medialta laboratorija" className="h-[64px] w-auto max-w-[240px] object-contain sm:h-[88px] sm:max-w-[330px]" />
+              <img src={logoAsset.url} alt="Medialta laboratorija" className="h-[54px] w-auto max-w-[215px] object-contain sm:h-[74px] sm:max-w-[300px]" />
             </Link>
             <nav className="hidden items-center gap-8 md:flex" aria-label="Glavna navigacija">
               {nav.map((item) => (
