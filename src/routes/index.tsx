@@ -3,7 +3,8 @@ import { Clock3, MapPin, Phone } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { MapEmbed, SiteShell } from "@/components/site-shell";
-import { contact } from "@/lib/medialta-data";
+import { OpenStatusBadge } from "@/components/open-status";
+import { contact, workingHours, closedDayLabel, closedDayNote } from "@/lib/medialta-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -38,7 +39,7 @@ function HomePage() {
         </div>
         <aside className="reveal-up border border-border bg-muted p-7 shadow-xl shadow-foreground/5 sm:p-8 lg:col-span-5 [animation-delay:120ms]">
           <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-1">
-            <div><div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary"><Clock3 className="size-4" /> Radno vreme</div><div className="grid grid-cols-2 gap-4 text-sm"><p><b>Pon–Pet</b><br/><span className="text-muted-foreground">07:00–19:00</span></p><p><b>Subota</b><br/><span className="text-muted-foreground">07:00–15:00</span></p><p><b className="text-primary">Nedelja</b><br/><span className="text-muted-foreground">Ne radimo</span></p></div></div>
+            <div><div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary"><Clock3 className="size-4" /> Radno vreme</div><OpenStatusBadge className="mb-5" /><div className="grid grid-cols-2 gap-4 text-sm">{workingHours.map((hours) => <p key={hours.label}><b>{hours.label}</b><br /><span className="text-muted-foreground">{hours.open}–{hours.close}</span></p>)}<p><b className="text-primary">{closedDayLabel}</b><br /><span className="text-muted-foreground">{closedDayNote}</span></p></div></div>
             <div className="border-t border-foreground/10 pt-7"><div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary"><MapPin className="size-4" /> Kontakt i lokacija</div><p className="mb-4 text-sm">Dobanovački put 2<br/><b className="text-base">Zemun–Altina</b></p><div className="flex flex-col gap-2 font-medium"><a href="tel:+381117703180">{contact.phone}</a><a href="tel:+381649023902">{contact.mobile}</a></div></div>
           </div>
         </aside>
