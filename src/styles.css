@@ -44,7 +44,12 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-bright: var(--destructive-bright);
   --color-success: var(--success);
+  --color-success-bright: var(--success-bright);
+  --shadow-card-soft: 0 18px 40px -26px color-mix(in oklab, var(--foreground) 32%, transparent);
+  --shadow-card-lift: 0 32px 66px -30px color-mix(in oklab, var(--foreground) 45%, transparent);
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -82,7 +87,10 @@
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
+  --destructive-bright: oklch(0.704 0.191 22.216);
   --success: oklch(0.55 0.13 155);
+  --success-bright: oklch(0.75 0.15 155);
+
   --border: oklch(0.27 0.055 303 / 12%);
   --input: oklch(0.27 0.055 303 / 16%);
   --ring: oklch(0.62 0.16 20);
@@ -158,6 +166,17 @@
 @utility reveal-up {
   animation: fade-in-up 700ms cubic-bezier(0.19, 1, 0.22, 1) both;
 }
+
+@keyframes grow-line {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@utility reveal-line {
+  transform-origin: left center;
+  animation: grow-line 900ms cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getLabStatus, type LabStatus } from "@/lib/schedule";
 
-export function OpenStatusBadge({ className = "" }: { className?: string }) {
+export function OpenStatusBadge({ className = "", tone = "default" }: { className?: string; tone?: "default" | "onDark" }) {
   const [status, setStatus] = useState<LabStatus | null>(null);
 
   useEffect(() => {
@@ -16,15 +16,20 @@ export function OpenStatusBadge({ className = "" }: { className?: string }) {
   }, []);
 
   if (!status) {
-    return <span aria-hidden="true" className={`inline-flex h-8 min-w-[186px] items-center rounded-full bg-muted/70 ${className}`} />;
+    return <span aria-hidden="true" className={`inline-flex h-8 min-w-[186px] items-center rounded-full ${tone === "onDark" ? "bg-background/10" : "bg-muted/70"} ${className}`} />;
   }
 
-  const tone = status.isOpen
-    ? "border-success/35 bg-success/10 text-success"
-    : "border-destructive/35 bg-destructive/10 text-destructive";
+  const palette = status.isOpen
+    ? tone === "onDark"
+      ? "border-background/25 bg-background/10 text-success-bright"
+      : "border-success/35 bg-success/10 text-success"
+    : tone === "onDark"
+      ? "border-background/25 bg-background/10 text-destructive-bright"
+      : "border-destructive/35 bg-destructive/10 text-destructive";
 
   return (
-    <span role="status" className={`inline-flex items-center gap-2.5 rounded-full border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider ${tone} ${className}`}>
+    <span role="status" className={`inline-flex items-center gap-2.5 rounded-full border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider ${palette} ${className}`}>
+
       <span className="relative flex size-2.5 shrink-0 items-center justify-center">
         {status.isOpen && <span className="absolute inline-flex size-2.5 animate-ping rounded-full bg-current opacity-60" />}
         <span className="relative inline-flex size-2.5 rounded-full bg-current" />
