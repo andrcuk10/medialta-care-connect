@@ -19,7 +19,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="mx-auto grid h-24 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-6">
           <div className="flex min-w-0 items-center gap-8">
             <Link to="/" aria-label="Medialta početna" className="shrink-0">
-              <img src={logoAsset.url} alt="Medialta laboratorija" className="h-[58px] w-auto max-w-[230px] object-contain sm:h-[80px] sm:max-w-[320px]" />
+              <img src={logoAsset.url} alt="Medialta laboratorija" className="h-[54px] w-auto max-w-[215px] object-contain sm:h-[74px] sm:max-w-[300px]" />
             </Link>
             <nav className="hidden items-center gap-8 md:flex" aria-label="Glavna navigacija">
               {nav.map((item) => (
