@@ -32,9 +32,9 @@ function ContactPage() {
           </header>
 
           <div className="mt-12 flex flex-col gap-5">
-            <article className="reveal-up group rounded-xl border border-border bg-card p-7 shadow-card-soft transition-[transform,box-shadow] duration-500 hover:-translate-x-1.5 hover:shadow-card-lift [animation-delay:120ms]">
+            <article className="reveal-up group rounded-lg border border-border bg-card p-7 shadow-card-soft transition-[transform,box-shadow] duration-500 hover:-translate-x-1.5 hover:shadow-card-lift [animation-delay:120ms]">
               <div className="flex items-start gap-5">
-                <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-foreground text-background transition-colors duration-500 group-hover:bg-primary"><Phone className="size-5" /></span>
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-foreground text-background transition-colors duration-500 group-hover:bg-primary"><Phone className="size-5" /></span>
                 <div className="min-w-0">
                   <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Telefoni</h2>
                   <div className="mt-3 flex flex-col gap-1.5">
@@ -45,10 +45,10 @@ function ContactPage() {
               </div>
             </article>
 
-            <article className="reveal-up group rounded-xl border border-foreground bg-foreground p-7 text-background shadow-card-lift transition-transform duration-500 hover:-translate-x-1.5 lg:ml-8 [animation-delay:220ms]">
+            <article className="reveal-up group rounded-lg border border-foreground bg-foreground p-7 text-background shadow-card-lift transition-transform duration-500 hover:-translate-x-1.5 lg:ml-8 [animation-delay:220ms]">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center gap-5">
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-background/10"><Clock3 className="size-5" /></span>
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-background/10"><Clock3 className="size-5" /></span>
                   <h2 className="text-xs font-semibold uppercase tracking-widest text-background/50">Radno vreme</h2>
                 </div>
                 <OpenStatusBadge tone="onDark" />
@@ -65,9 +65,9 @@ function ContactPage() {
               </div>
             </article>
 
-            <article className="reveal-up group rounded-xl border border-border bg-card p-7 shadow-card-soft transition-[transform,box-shadow] duration-500 hover:-translate-x-1.5 hover:shadow-card-lift lg:ml-16 [animation-delay:320ms]">
+            <article className="reveal-up group rounded-lg border border-border bg-card p-7 shadow-card-soft transition-[transform,box-shadow] duration-500 hover:-translate-x-1.5 hover:shadow-card-lift lg:ml-16 [animation-delay:320ms]">
               <div className="flex items-start gap-5">
-                <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-500 group-hover:bg-primary group-hover:text-primary-foreground"><MapPin className="size-5" /></span>
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors duration-500 group-hover:bg-primary group-hover:text-primary-foreground"><MapPin className="size-5" /></span>
                 <div className="min-w-0">
                   <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Adresa</h2>
                   <p className="mt-3 font-serif text-xl leading-snug">{contact.address}</p>
@@ -80,9 +80,9 @@ function ContactPage() {
           </div>
         </div>
 
-        <div className="reveal-up relative min-h-[520px] overflow-hidden rounded-2xl border border-border bg-muted shadow-card-lift lg:col-span-7 [animation-delay:380ms]">
+        <div className="reveal-up relative min-h-[520px] overflow-hidden rounded-lg border border-border bg-muted shadow-card-lift lg:col-span-7 [animation-delay:380ms]">
           <MapEmbed className="min-h-[520px]" />
-          <div className="pointer-events-none absolute inset-x-4 bottom-4 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-background/90 px-5 py-4 shadow-card-soft backdrop-blur-md sm:inset-x-6 sm:bottom-6">
+          <div className="pointer-events-none absolute inset-x-4 bottom-4 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-border bg-background/90 px-5 py-4 shadow-card-soft backdrop-blur-md sm:inset-x-6 sm:bottom-6">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary">Medialta Laboratorija</p>
               <p className="mt-1 text-sm text-muted-foreground">{contact.address}</p>
