@@ -16,7 +16,7 @@ export function OpenStatusBadge({ className = "", tone = "default" }: { classNam
   }, []);
 
   if (!status) {
-    return <span aria-hidden="true" className={`inline-flex h-8 min-w-[186px] items-center rounded-full bg-muted/70 ${className}`} />;
+    return <span aria-hidden="true" className={`inline-flex h-8 min-w-[186px] items-center rounded-full ${tone === "onDark" ? "bg-background/10" : "bg-muted/70"} ${className}`} />;
   }
 
   const palette = status.isOpen
