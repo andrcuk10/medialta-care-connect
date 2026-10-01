@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, Phone } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/medialta-logo.png.asset.json";
+import logoAsset from "@/assets/medialta-logo-v2.png.asset.json";
 import { contact } from "@/lib/medialta-data";
 
 const nav = [
