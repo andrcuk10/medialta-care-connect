@@ -4,7 +4,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { MapEmbed, SiteShell } from "@/components/site-shell";
 import { OpenStatusBadge } from "@/components/open-status";
-import { contact, workingHours, closedDayLabel, closedDayNote } from "@/lib/medialta-data";
+import { contact } from "@/lib/medialta-data";
+import { workingHours, closedDayLabel, closedDayNote } from "@/lib/schedule";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
