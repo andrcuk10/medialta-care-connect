@@ -1,0 +1,3 @@
+- [ ] Extract every current price-list section and regular price from the supplied workbook.
+- [ ] Display every section as a card without descriptive subtext, retaining search.
+- [ ] Verify source coverage, prices, and the full price-list page.
