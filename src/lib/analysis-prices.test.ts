@@ -1,4 +1,5 @@
-import { describe, expect, test } from "bun:test";
+import { describe, test } from "node:test";
+import assert from "node:assert/strict";
 import { analysisGroups } from "./medialta-data";
 import { formatAnalysisPrice, regularAnalysisPrices } from "./analysis-prices";
 
@@ -17,18 +18,18 @@ describe("Regular prices from the January 2026 price list, column D", () => {
 
   for (const [name, price] of expected) {
     test(`${name}: ${price} RSD, without discounts`, () => {
-      expect(regularAnalysisPrices[name]).toBe(price);
+      assert.equal(regularAnalysisPrices[name], price);
     });
   }
 
   test("every displayed analysis has a regular price", () => {
     const names = analysisGroups.flatMap((group) => group.analyses);
-    expect(names).toHaveLength(32);
-    for (const name of names) expect(regularAnalysisPrices[name]).toBeGreaterThan(0);
+    assert.equal(names.length, 32);
+    for (const name of names) assert.ok((regularAnalysisPrices[name] ?? 0) > 0);
   });
 
   test("an unpriced TSH variant does not inherit the ultrasensitive price", () => {
-    expect(regularAnalysisPrices["TSH"]).toBeUndefined();
-    expect(formatAnalysisPrice("TSH")).toBe("Cena na upit");
+    assert.equal(regularAnalysisPrices["TSH"], undefined);
+    assert.equal(formatAnalysisPrice("TSH"), "Cena na upit");
   });
 });
