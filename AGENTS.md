@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Use the shared semantic `rounded-lg` radius for cards, buttons, fields, and framed media so every page stays visually consistent.
+- Keep regular analysis prices in a browser-safe data module with source attribution; match precise analysis variants and never infer a missing price from discounts or obsolete worksheets.

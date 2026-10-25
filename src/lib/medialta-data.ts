@@ -8,12 +8,12 @@ export const analysisGroups = [
   {
     name: "Osnovna biohemija",
     description: "Najčešće analize za osnovnu procenu zdravstvenog stanja.",
-    analyses: ["Glukoza", "Urea", "Kreatinin", "Bilirubin", "AST", "ALT", "Gvožđe"],
+    analyses: ["Glukoza", "Urea", "Kreatinin", "Bilirubin ukupan", "AST", "ALT", "Gvožđe"],
   },
   {
     name: "Hematologija",
     description: "Pregled krvnih ćelija i parametara koagulacije.",
-    analyses: ["Kompletna krvna slika", "Leukocitarna formula", "Sedimentacija", "Fibrinogen", "D-dimer"],
+    analyses: ["Krvna slika + LF 5dif", "Leukocitarna formula (mikroskopski)", "Sedimentacija", "Fibrinogen", "D-dimer"],
   },
   {
     name: "Lipidni status",
@@ -23,12 +23,12 @@ export const analysisGroups = [
   {
     name: "Hormoni i markeri",
     description: "Analize funkcije štitne žlezde i odabrani tumorski markeri.",
-    analyses: ["TSH", "FT3", "FT4", "Anti-TPO", "PSA", "CEA", "CA 19-9"],
+    analyses: ["Ultrasenzitivan TSH", "FT3", "FT4", "Anti-TPO", "PSA", "CEA", "CA 19-9"],
   },
   {
     name: "Vitamini i minerali",
     description: "Provera važnih vitamina i minerala u organizmu.",
-    analyses: ["Vitamin D", "Vitamin B12", "Folna kiselina", "Kalcijum", "Magnezijum"],
+    analyses: ["Vitamin D3 (OH-25)", "Vitamin B12", "Folna kiselina", "Kalcijum", "Magnezijum"],
   },
   {
     name: "Urin i mikrobiologija",
