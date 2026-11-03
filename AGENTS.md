@@ -11,3 +11,4 @@
 
 - Use the shared semantic `rounded-lg` radius for cards, buttons, fields, and framed media so every page stays visually consistent.
 - Keep regular analysis prices in a browser-safe data module with source attribution; match precise analysis variants and never infer a missing price from discounts or obsolete worksheets. Use visible rows and section headings from the current worksheet in source order, exclude hidden superseded rows, retain repeated entries in different sections, preserve numeric zero, and leave nonnumeric prices on request so the displayed catalog matches the printed price list.
+- Keep calculator selection ephemeral and keyed by exact analysis name across catalog sections; calculate through the shared browser-safe helper so repeated entries are not double-charged, unknown prices stay explicitly excluded, and services are never added implicitly.

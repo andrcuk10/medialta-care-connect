@@ -1,3 +1,5 @@
 - [x] Extract every current price-list section and regular price from the supplied workbook.
 - [x] Display every section as a card without descriptive subtext, retaining search.
 - [x] Verify source coverage, prices, and the full price-list page.
+- [x] Add analysis selection, a total, and a removable selection summary to the price list.
+- [x] Test calculation rules and verify the calculator on desktop and mobile.
