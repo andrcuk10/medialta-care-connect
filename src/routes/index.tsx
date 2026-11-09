@@ -30,8 +30,8 @@ function HomePage() {
     <section className="mx-auto max-w-7xl px-5 pb-20 pt-14 sm:px-6 lg:pb-24 lg:pt-20">
       <div className="grid items-start gap-12 lg:grid-cols-12">
         <div className="reveal-up lg:col-span-7">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">Laboratorija za medicinsku biohemiju</p>
-          <h1 className="max-w-3xl font-serif text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">Precizna dijagnostika u srcu <em className="font-normal">Zemuna</em>.</h1>
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">{"\n"}</p>
+          <h1 className="max-w-3xl font-serif text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">Laboratorija za medicinsku biohemiju na{"\u00a0"}Altini.</h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">Kvalitetna i brza laboratorijska usluga, uz prijatan boravak i posvećen pristup svakom pacijentu.</p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild variant="editorial" size="editorial"><a href="tel:+381117703180"><Phone /> Pozovite nas</a></Button>
