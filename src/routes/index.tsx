@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
 
 const prep = [
   ["01", "Vreme uzorkovanja", "Za većinu analiza krv je najbolje vaditi ujutru. Za tačna uputstva u vezi sa vašom analizom pozovite laboratoriju."],
-  ["02", "Hrana i tečnost", "Za analize koje zahtevaju pripremu obično se dolazi bez obroka. Vodu možete piti, osim ako lekar nije drugačije savetovao."],
+  ["02", "Hrana i tečnost", "Preporuka je da se pre vađenja krvi pije voda, dok hranu ne treba da konzumirate 10 do 12 sati pre vađenja krvi."],
   ["03", "Terapija i napor", "Ne prekidajte terapiju na svoju ruku. Obavestite osoblje o lekovima i izbegnite veći fizički napor pre uzorkovanja."],
 ];
 
